@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+body {
+  background-color: rgb(50, 50, 50);
+  background-image: url(insideMars.jpeg);
+}
+
+#todo-body-containers {
+  width: 1325px;
+  /* width: 100%; */
+  height: 100%;
+  margin: 0 auto;
+  /* padding: 26px; */
+  /* background-color: brown; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#todo-container-right {
+  width: 800px;
+  height: 800px;
+  /* background-color: rgb(253, 253, 253); */
+  /* float: left; */
+  padding: 26px;
+  /* margin: 0 50px 0 -10px; */
+}
+
+#todo-heading {
+  font-size: 3rem;
+  font-family: 'Holtwood One SC', serif;
+  color: rgb(56, 165, 255);
+  margin: 0 0 0 12px;
+  text-shadow: 4px 4px 8px rgb(7, 7, 53);
+}
+
+#todo-container {
+  width: 100%;
+  height: 570px;
+  /* border: gray 1px solid; */
+  margin: 25px 0;
+  padding: 0 12px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#todo-container::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 25px;
+}
+#todo-container::-webkit-scrollbar-track {
+  border: none;
+}
+#todo-container::-webkit-scrollbar-thumb {
+  background-color: rgb(92, 92, 92);
+  border-radius: 25px;
+}
+
+.todo-collection {
+  width: 100%;
+  height: 128px;
+  /* border: gray 1px solid; */
+  border-radius: 11px;
+  padding: 8px 8px;
+  margin: 0 0 16px 0;
+  background-color: rgb(224, 196, 162);
+  box-shadow: 4px 4px 8px rgb(122, 76, 5);
+  opacity: 0.7;
+}
+.todo-collection:hover {
+  opacity: 1;
+}
+
+.todo-list-container {
+  width: 100%;
+  height: 82px;
+  background-color: none;
+  /* background-image: url(insideMars.jpeg); */
+  /* border-bottom: rgb(243, 24, 24) 2px solid; */
+  border-bottom: rgb(233, 17, 17) 1px solid;
+  border-radius: 5px;
+  /* border-bottom-width: 3px; */
+  margin: 0;
+  /* box-shadow: 1px 1px 1px rgb(117, 77, 3); */
+
+  /* padding: 6px 10px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo {
+  float: left;
+  text-align: center;
+  color: rgb(61, 61, 61);
+  font-family: 'Suez One', serif;
+  padding: 28px 0 0 0;
+  /* margin: 0 auto; */
+  font-size: 1.7rem;
+  width: 600px;
+  /* height: 40px; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: greenyellow; */
+}
+.todo-list-index {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 4px 4px 6px rgb(87, 52, 3) ;
+  font-family: monospace;
+  color: rgb(0, 50, 214);
+  float: left;
+  list-style-position: inside;
+  width: 28px;
+  height: 28px;
+  /* background-color: rgb(255, 159, 159); */
+  border-radius: 8px;
+  position: relative;
+  /* right: 10px; */
+  top: 5px;
+  /* bottom: 8px; */
+  left: 8px;
+  text-align: center;
+  padding: 4px 0 0 6px;
+  /* box-shadow: 1px 1px 2px rgb(82, 117, 146); */
+}
+.todo-list-index:hover {
+  background-color: rgb(224, 224, 224);
+  opacity: 0;
+}
+.checklist {
+  width: 28px;
+  height: 28px;
+  float: right;
+  position: relative;
+  right: 8px;
+  top: 5px;
+  /* bottom: 10px; */
+  padding: 4px;
+  box-shadow: 1px 1px 2px rgb(82, 117, 146);
+  border-radius: 50px;
+  /* background-color: blueviolet; */
+}
+.checklist:hover {
+  background-color: rgb(186, 245, 255);
+}
+
+.select-routine-priority {
+  width: 160px;
+  /* height: 40px; */
+  /* background-color: blueviolet; */
+  float: left;
+  color: rgb(85, 80, 80);
+  /* margin: 0px 11px; */
+  /* padding: 2px;  */
+  position: relative;
+  left: 8px;
+  top: 6px;
+}
+.select-category {
+  width: 90px;
+  /* height: 40px; */
+  /* background-color: rgb(255, 133, 180); */
+  /* background-color: rgb(223, 186, 141); */
+  float: left;
+  color: rgb(61, 57, 57);
+  border-radius: 5px;
+  /* margin: 3px 11px; */
+  /* padding: 6px;  */
+  position: relative;
+  /* left: 8px; */
+  top: 4px;
+}
+.categories {
+  /* background-color: rgb(255, 133, 180); */
+  /* background-color: rgb(235, 193, 142); */
+  color: rgb(9, 26, 61);
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 2px rgb(82, 117, 146); */
+  position: relative;
+  top: 1px;
+  padding: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  -webkit-appearance: none;
+  text-align-last: center;
+  border: none;
+  outline: none;
+}
+.categories:hover {
+  /* padding: 0 0 0 2px; */
+  box-shadow: 1px 1px 2px rgb(82, 117, 146);
+  font-size: 1.1rem;
+}
+.time-reminder {
+  width: 110px;
+  /* height: 40px; */
+  /* background-color: rgb(231, 187, 120); */
+  /* box-shadow: 1px 1px 2px rgb(82, 117, 146); */
+  float: left;
+  color: rgb(61, 57, 57);
+  border-radius: 5px;
+  margin: 5px 16px 5px 38px;
+  padding: 2px 8px;
+  display: flex;
+  justify-content: center;
+}
+.time-reminder:hover {
+  /* background-color: rgb(206, 196, 181); */
+}
+.time {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3px;
+  margin: 0 14px 0 0;
+}
+.time:hover {
+  color: rgb(87, 82, 74);
+  /* font-size: 1.1rem; */
+}
+
+.reminder-img {
+  width: 22px;
+  height: 20px;
+  color: gray;
+  margin: 2px 0;
+  /* background-color: rgb(202, 190, 172); */
+  background-color: rgb(165, 159, 150);
+
+  padding: 2px;
+  border-radius: 4px;
+}
+.reminder-img:hover {
+  color: rgb(247, 0, 0);
+  /* background-color: rgb(165, 159, 150); */
+  background-color: rgb(202, 190, 172);
+
+}
+
+.routine-priority-list {
+  outline: none;
+  font-size: 0.8rem;
+  color: rgb(44, 44, 44);
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  -webkit-appearance: none;
+  position: relative;
+  top: 2px;
+  padding: 3px 4px;
+  background-color: rgb(135, 188, 231);
+  /* box-shadow: 1px 1px 2px rgb(82, 117, 146); */
+  text-align-last: center;
+}
+.routine-priority-list:hover {
+  /* background-color: rgb(209, 209, 209); */
+  /* -webkit-appearance: textarea; */
+  padding: 4px 4px;
+  box-shadow: 1px 1px 2px rgb(82, 117, 146);
+  font-size: 0.9rem;
+}
+
+label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 5px 6px;
+  float: left;
+  font-size: 0.8rem;
+}
+.label:hover {
+  display: inline;
+}
+option {
+  font-size: 1rem;
+}
+/* Duration */
+.duration {
+  /* width: 30px; */
+  /* height: 30px; */
+  /* background-color: rgb(141, 137, 123); */
+  box-shadow: 1px 1px 2px 2px 2px rgb(82, 117, 146);
+  float: left;
+  color: rgb(26, 31, 25);
+  border-radius: 5px;
+  position: relative;
+  top: 7px;
+  left: 2px;
+  /* margin: 5px 15px; */
+  padding: 2px 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Edit */
+#edit-button {
+  position: relative;
+  left: 28px;
+  top: 7px;
+  padding: 3px 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgb(61, 55, 55);
+  border-radius: 5px;
+  /* background-color: rgb(255, 174, 205); */
+  box-shadow: 1px 1px 2px rgb(82, 74, 77);
+  /* opacity: 0.6; */
+  outline: none;
+  border: none;
+}
+#edit-button:hover {
+  background-color: rgb(119, 89, 35);
+  /* opacity: 1; */
+  color: rgb(243, 241, 242);
+  font-size: 1rem;
+}
+
+/* Left container */
+
+#todo-container-left {
+  width: 500px;
+  height: 800px;
+  padding: 18px;
+  /* background-color: rgb(209, 203, 194); */
+  /* background-image: url(insideMars-right-div.jpg); */
+  background-size: cover;
+  /* float: left; */
+  /* display: flex;
+  justify-content: center; */
+
+}
+
+#add-todo {
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 58px 0 24px 0;
+}
+
+#input-todo-container {
+  width: 460px;
+  height: 62px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 5px 8px;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 5px;
+}
+#input-todo {
+  /* display: flex;
+  justify-content: flex-start; */
+  width: 400px;
+  font-size: 2rem;
+  padding: 6px 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+}
+#add-button {
+  font-size: 2rem;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  height: 52px;
+  background-color: whitesmoke;
+}
+
+.remove {
+  transform: translateY(8rem) rotateZ(20deg);
+  /* animation-name: removetodo;
+  animation-duration: 2s;
+  animation-iteration-count: 1;*/
+  opacity: 0.5;
+/*@keyframes removetodo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  } */
+}
+
